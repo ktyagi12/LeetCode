@@ -28,3 +28,19 @@ class Solution:
                 return ind
             
         return -1        
+
+#===============================================        
+
+class Solution:
+    def firstUniqChar(self, s: str) -> int:
+        
+        if not s:
+            return -1
+        
+        counter = Counter(s)      
+        
+        for k in counter.keys():
+            if (counter[k] == 1):
+                return s.index(k)
+                    
+        return -1
